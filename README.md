@@ -37,14 +37,24 @@ $ npm install
 ```bash
 # development
 $ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
+Prerequisites
+Before running the application, ensure the following are set up:
 
+AWS Account for S3 or Cloudflare R2:
+
+You'll need an AWS account with S3 credentials or a Cloudflare R2 account for object storage.
+Update the environment variables for your storage service in the .env file.
+Database Setup:
+
+Configure your database Sqlite and update the connection settings in the .env file.
+Ensure the database is running and accessible.
+FFmpeg Installation:
+
+Install FFmpeg on your system, which is required for media processing.
+```bash
+$ ffmpeg -version
+```
 ## Test
 
 ```bash
