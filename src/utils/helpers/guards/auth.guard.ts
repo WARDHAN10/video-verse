@@ -9,6 +9,7 @@ export class AuthGuard implements CanActivate {
   canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
     const request: Request = context.switchToHttp().getRequest();
     const token =request.headers['x-auth-token'];
+    // console.log(request)
     if (!token || token !== this.validToken) {
       throw new ForbiddenException('Invalid token');
     }

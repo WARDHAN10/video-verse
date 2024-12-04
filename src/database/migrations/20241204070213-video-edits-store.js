@@ -22,25 +22,25 @@ module.exports = {
       },
       operation: {
         type: Sequelize.STRING,
-        allowNull: false, 
+        allowNull: false,
       },
       start_time: {
         type: Sequelize.INTEGER,
-        allowNull: true, 
+        allowNull: true,
       },
       end_time: {
         type: Sequelize.INTEGER,
-        allowNull: true, 
+        allowNull: true,
       },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+        // defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
       },
       updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+        // defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
       },
       created_by: {
         type: Sequelize.STRING,
