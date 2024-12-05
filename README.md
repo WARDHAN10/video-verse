@@ -62,23 +62,52 @@ Install FFmpeg on your system, which is required for media processing.
 $ ffmpeg -version
 ```
 # Dependencies
-multer: Middleware for handling multipart/form-data file uploads in Node.js applications.
-cloudinary: Cloud-based service for media management, offering tools for uploading, transforming, and delivering images and videos.
-@aws-sdk/client-s3: AWS SDK for interacting with S3, allowing file uploads, downloads, and bucket management in your AWS infrastructure.
-sequelize: A promise-based ORM for Node.js that supports various relational databases (MySQL, PostgreSQL, SQLite, etc.) for easy querying and transaction handling.
-sequelize-typescript: TypeScript support for Sequelize ORM, providing decorators and type safety for model definitions.
-sqlite3: A lightweight, serverless SQL database engine used to store data in a single file, ideal for small to medium-sized applications.
-axios: Promise-based HTTP client for making API requests, supporting both browser and Node.js environments.
-moment: A library for parsing, validating, manipulating, and formatting dates and times in JavaScript.
-moment-timezone: An extension of Moment.js that allows manipulation of dates and times with time zone support.
-aws-sdk: AWS SDK for JavaScript, enabling interaction with various AWS services like S3, DynamoDB, Lambda, and more.
-formidable: A Node.js module for parsing form data, especially file uploads, and handling multipart requests.
-reflect-metadata: A library that enables the use of TypeScript decorators and metadata reflection, commonly used in frameworks like NestJS.
-fluent-ffmpeg is a powerful and easy-to-use Node.js library that simplifies interacting with the FFmpeg multimedia framework.
+## Dependencies
 
-# Reffered Links
-https://developers.cloudflare.com/r2/examples/aws/aws-sdk-js/
-https://stackoverflow.com/questions/74461800/how-to-trim-a-video-stored-in-another-sever-via-our-node-js-server
-https://stackoverflow.com/questions/48893315/trim-and-concat-audio-files-in-node-js
-https://stackoverflow.com/questions/45555960/nodejs-fluent-ffmpeg-cannot-find-ffmpeg
-https://js.libhunt.com/ffmpeg-js-alternatives
+### `multer`
+Multer is middleware for handling multipart/form-data, which is used for uploading files in Node.js applications.
+
+### `cloudinary`
+Cloudinary is a cloud-based service for media management, offering tools for uploading, transforming, and delivering images and videos.
+
+### `@aws-sdk/client-s3`
+The AWS SDK for interacting with Amazon S3, allowing for file uploads, downloads, and bucket management in your AWS infrastructure.
+
+### `sequelize`
+Sequelize is a promise-based ORM for Node.js that supports various relational databases (MySQL, PostgreSQL, SQLite, etc.), providing an easy way to query and handle transactions.
+
+### `sequelize-typescript`
+Adds TypeScript support for Sequelize ORM, providing decorators and type safety for model definitions.
+
+### `sqlite3`
+SQLite3 is a lightweight, serverless SQL database engine used for storing data in a single file, ideal for small to medium-sized applications.
+
+### `axios`
+Axios is a promise-based HTTP client for making API requests, supporting both browser and Node.js environments.
+
+### `moment`
+Moment is a library for parsing, validating, manipulating, and formatting dates and times in JavaScript.
+
+### `moment-timezone`
+An extension of Moment.js that adds support for manipulating dates and times with time zone support.
+
+### `aws-sdk`
+The AWS SDK for JavaScript enables interaction with various AWS services like S3, DynamoDB, Lambda, and more.
+
+### `formidable`
+Formidable is a Node.js module for parsing form data, especially file uploads, and handling multipart requests.
+
+### `reflect-metadata`
+A library that enables the use of TypeScript decorators and metadata reflection, commonly used in frameworks like NestJS.
+
+### `fluent-ffmpeg`
+Fluent-ffmpeg is a powerful and easy-to-use Node.js library that simplifies interacting with the FFmpeg multimedia framework for tasks like video/audio conversion, manipulation, and streaming.
+
+## Referred Links
+
+- [Cloudflare R2 Example: AWS SDK for JavaScript](https://developers.cloudflare.com/r2/examples/aws/aws-sdk-js/)
+- [How to Trim a Video Stored on Another Server via Our Node.js Server](https://stackoverflow.com/questions/74461800/how-to-trim-a-video-stored-in-another-sever-via-our-node-js-server)
+- [Trim and Concatenate Audio Files in Node.js](https://stackoverflow.com/questions/48893315/trim-and-concat-audio-files-in-node-js)
+- [Node.js Fluent-FFmpeg: Cannot Find FFmpeg](https://stackoverflow.com/questions/45555960/nodejs-fluent-ffmpeg-cannot-find-ffmpeg)
+- [FFmpeg.js Alternatives](https://js.libhunt.com/ffmpeg-js-alternatives)
+
