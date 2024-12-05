@@ -244,7 +244,7 @@ export class VideoOperationsService {
     try {
       await new Promise<void>((resolve, reject) => {
         Ffmpeg({ source: inputPath })
-          .setStartTime(start)
+          .setStartTime(2)
           .setDuration(duration)
           .on('start', function (commandLine) {
             console.log('Spawned FFmpeg with command: ' + commandLine);
