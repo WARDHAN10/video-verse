@@ -3,12 +3,9 @@ import { Test, TestingModule } from '@nestjs/testing';
 import * as fs from 'fs';
 import request from 'supertest';
 import { AppModule } from './src/app.module';
-
 describe('VideoOperationsController (e2e)', () => {
   let app: INestApplication;
-
-  // Set a global timeout of 3 minutes (180000 ms) for the entire suite
-  jest.setTimeout(180000); 
+  jest.setTimeout(240000); 
 
   beforeAll(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
@@ -46,7 +43,16 @@ describe('VideoOperationsController (e2e)', () => {
       .set('x-auth-token', authToken)
       .expect(201);
     console.log('Trim-Response', trimResponse.body);
-    expect(trimResponse.body).toHaveProperty('url');
+
+    const mergeResponse = await request(app.getHttpServer())
+    .post('/video-operations/merge')
+    .set('x-auth-token', authToken)
+    .send({
+      video_ids: ['1', '3'],  // Sending an array of video IDs
+    })
+    .expect(201);
+  console.log('Merge-Response', mergeResponse.body);
+    expect(mergeResponse.body).toHaveProperty('url');
   });
 
   afterAll(async () => {

@@ -14,6 +14,7 @@ export class VideoEditStore extends Model<VideoEditStore> {
   @Column({
     type: DataType.INTEGER,
     allowNull: false,
+     onDelete: 'CASCADE' 
   })
   originalVideoId: number;
 
