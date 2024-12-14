@@ -9,7 +9,7 @@ import Ffmpeg from 'fluent-ffmpeg';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import * as fs from 'fs';
 import path from 'path';
-import { checkFileSize, streamToBuffer } from 'src/utils/helpers';
+import { checkFileSize, streamToBuffer } from '../../utils/helpers';
 import * as stream from 'stream';
 import { VideoEditStore } from './entities/video_edit_store.entity';
 import { VideoStore } from './entities/video_store.entity';
@@ -33,8 +33,8 @@ export class VideoOperationsService {
       },
     });
     this.bucketName = process.env.AWS_BUCKET_NAME;
-    Ffmpeg.setFfmpegPath(process.env.FFMPEG_PATH);
-    Ffmpeg.setFfprobePath(process.env.FFPROBE_PATH);
+    // Ffmpeg.setFfmpegPath(process.env.FFMPEG_PATH);
+    // Ffmpeg.setFfprobePath(process.env.FFPROBE_PATH);
   }
 
   async getFileDetails(id: string) {
@@ -169,7 +169,7 @@ export class VideoOperationsService {
         return { message: "video should be between 5 to 25 MB of size" };
       }
 
-      const s3Url = await this.uploadToR2(buffer, new Date().getTime(), 'upload');
+      const s3Url = await this.uploadToR2(buffer, new Date().getTime(), 'upload/upload');
       const video = await this.videoStoreRepository.create({
         filePath: s3Url,
         size: size,
@@ -231,7 +231,6 @@ export class VideoOperationsService {
 
       const fileUrl = fileName;
       console.log('Uploaded file URL:', fileUrl);
-
       return fileUrl;
     } catch (error) {
       console.error('Error uploading to Cloudflare R2:', error);

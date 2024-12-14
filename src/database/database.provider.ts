@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
-import { VideoEditStore } from 'src/modules/video_operations/entities/video_edit_store.entity';
-import { VideoStore } from 'src/modules/video_operations/entities/video_store.entity';
+import { VideoStore } from '../modules/video_operations/entities/video_store.entity';
 import { databaseConfig } from './database.config';
+import { VideoEditStore } from '../modules/video_operations/entities/video_edit_store.entity';
 
 export const databaseProviders = [
   {
